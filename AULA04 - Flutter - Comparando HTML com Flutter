@@ -1,0 +1,60 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text("Texto que vai aparecer"),
+        ),
+        body: Column(
+          children: [
+            // --- COLUNA 1 ANINHADA ---
+            Column(
+              children: [
+                Text(
+                  'Aqui é a coluna 1', 
+                  style: TextStyle(
+                    backgroundColor: Colors.black, 
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  "O santa não tem Copa do Brasil",   
+                  textAlign: TextAlign.center, 
+                  style: TextStyle(
+                    backgroundColor: Color.fromRGBO(51, 2, 28, 1),
+                    color: Colors.amber,   
+                    fontSize: 12,   
+                  ),
+                ),
+              ],
+            ),
+            
+            // --- COLUNA 2 ANINHADA ---
+            Column(
+              children: [
+                Text(
+                  "Aqui é a coluna 2", 
+                  style: TextStyle(
+                    backgroundColor: Colors.deepOrangeAccent, 
+                    color: Colors.black,
+                  ),
+                ),
+                Text(
+                  "Testando na aula",
+                  style: TextStyle(
+                    backgroundColor: Colors.black, 
+                    color: Colors.white, 
+                    fontSize: 32, 
+// Reduzi de 120 para evitar erro de estouro de tela
+                  ),
+                ),
+              ],
+            ),
+          ],            
+        ),
+      ),
+    ),
+  );
+}
