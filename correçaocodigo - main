@@ -1,0 +1,72 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MeuApp());
+}
+
+class MeuApp extends StatelessWidget {
+  const MeuApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: const CadastroPage(),
+    );
+  }
+}
+
+class CadastroPage extends StatelessWidget {
+  const CadastroPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Cadastro'),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            const Text(
+              'Criar uma nova conta',
+              style: TextStyle(
+                fontSize: 24,
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            Image.asset(
+              'assets/imagens/perfil.png',
+              width: 150,
+            ),
+
+            const SizedBox(height: 20),
+
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'Digite o seu nome',
+              ),
+            ),
+
+            const SizedBox(height: 10),
+
+            const TextField(
+              decoration: InputDecoration(
+                labelText: 'E-mail',
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            ElevatedButton(
+              onPressed: () {},
+              child: const Text('Cadastrar'),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
